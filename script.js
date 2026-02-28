@@ -24,8 +24,17 @@ handArea.addEventListener("click", () => {
     const flash = document.querySelector(".flash");
     flash.classList.add("active");
 
-    const leftCurtain = document.querySelector(".left-curtain");
-    const rightCurtain = document.querySelector(".right-curtain");
+    setTimeout(() => {
+
+    document.body.classList.add("shake");
+
+    if (revealSound) revealSound.play();
+
+    handArea.style.display = "none";
+    statusText.style.display = "none";
+    kryptonex.classList.remove("hidden");
+
+}, 3000);
 
     leftCurtain.classList.add("open-left");
     rightCurtain.classList.add("open-right");
@@ -41,4 +50,5 @@ handArea.addEventListener("click", () => {
 }, 3000);
 
 });
+
 
