@@ -18,10 +18,27 @@ handArea.addEventListener("click", () => {
     }, 2000);
 
     setTimeout(() => {
+
+    document.body.classList.add("shake");
+
+    const flash = document.querySelector(".flash");
+    flash.classList.add("active");
+
+    const leftCurtain = document.querySelector(".left-curtain");
+    const rightCurtain = document.querySelector(".right-curtain");
+
+    leftCurtain.classList.add("open-left");
+    rightCurtain.classList.add("open-right");
+
+    if (revealSound) revealSound.play();
+
+    setTimeout(() => {
         handArea.style.display = "none";
         statusText.style.display = "none";
         kryptonex.classList.remove("hidden");
-        if (revealSound) revealSound.play();
-    }, 3000);
+    }, 1500);
+
+}, 3000);
 
 });
+
