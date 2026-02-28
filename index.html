@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kryptonex</title>
+    <title>Kryptonex Biometric Reveal</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background:black; color:white; text-align:center;">
+<body>
 
-    <h1>KRYPTONEX TEST WORKING</h1>
+<div class="scanner-screen">
+    <h1 id="statusText">Place Hand to Authenticate</h1>
+
+    <div class="hand-area" id="handArea">
+        <div class="scan-line"></div>
+    </div>
+
+    <h1 id="kryptonex" class="hidden">KRYPTONEX</h1>
+</div>
+
+<audio id="scanSound" src="scan.mp3"></audio>
+<audio id="revealSound" src="reveal.mp3"></audio>
+
+<script src="script.js"></script>
 
 </body>
 </html>
